@@ -1,0 +1,66 @@
+.container {
+  padding:0;
+  margin:0;
+  height: 100vh;
+  width: 100%;
+  background-color:black;
+  color:white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+div:first-child {
+  margin:0;
+  padding-top:20px;
+}
+
+div {
+  text-align:center;
+  margin-top:50px;
+}
+
+span {
+  padding:10px;
+  border: 1px solid white;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  background-color:black;
+  color:white;
+  font-size:15px;
+  font-family: 'Press Start 2P', cursive;
+  padding:5px;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+input[type="password"] {
+  background-color:black;
+  color:white;
+  font-size:15px;
+  font-family: 'Press Start 2P', cursive;
+  padding:5px;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+input[type="submit"] {
+  font-size:20px;
+  width:100px;
+}
+
+.errors {
+  color:red;
+}
+
+.success {
+  color:green;
+}
+
+b {
+  display:inline-block;
+  margin-bottom:10px;
+}

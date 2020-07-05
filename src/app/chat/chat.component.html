@@ -1,0 +1,23 @@
+<div class="container">
+  <nav>
+    <h1>Chit Chat</h1><br>
+  </nav>
+  <div class="roomInformation">
+    <span class="users" style="color:green;">Refreshing browser will kick you out of the chat.</span><br><br>
+    <span class="users room">Room: {{ room.name }} </span>
+    <div class="users">Users: [ <span *ngFor="let user of users;index as idx">{{ user }} </span>]</div>
+  </div>
+  <div class="chatBox">
+    <form #txtMsg="ngForm" (ngSubmit)="sendMsg()">
+      <textarea [(ngModel)]="text" name="msg" rows="8" cols="40" placeholder="Text" minlength="1" maxlength="5000" required></textarea><br>
+      <input type="submit" value="Send" [disabled]="!txtMsg.form.valid">
+    </form>
+  </div>
+
+  <div class="msgs">
+    <div *ngFor="let message of messages">
+      <span style="color:green;">{{message.sender}} >></span> <span> {{ message.txt }}</span> <span class="time">  [{{ message.date }}]</span>
+    </div>
+  </div>
+
+</div>

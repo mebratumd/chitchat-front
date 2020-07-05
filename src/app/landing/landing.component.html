@@ -1,0 +1,47 @@
+<div class="container">
+
+  <div>
+    Chit Chat
+  </div>
+
+  <div>
+    <span (click)="toggle('c')">Create</span>
+  </div>
+
+  <div>
+    <span (click)="toggle('j')">Join</span>
+  </div>
+
+  <div class="errors" *ngIf="errors.length > 0">
+    <b *ngFor="let error of errors">
+      {{ error.msg }}<br>
+    </b>
+  </div>
+
+  <div *ngIf="success" class="success">
+    <b>{{ newroom.name }}</b> has been created.
+  </div>
+
+  <div *ngIf="join" class="userAction">
+
+    <form #joinRoom="ngForm" (ngSubmit)="joinMe(room)">
+      <input [(ngModel)]="room.username" name="username" type="text" placeholder="Username" minlength="4" maxlength="25" required><br>
+      <input [(ngModel)]="room.name" name="name" type="text" placeholder="Room name" minlength="4" maxlength="25" required><br>
+      <input [(ngModel)]="room.password" name="password" type="password" placeholder="Room password" minlength="4" maxlength="25" required><br>
+      <input type="submit" value="Go" [disabled]="!joinRoom.form.valid">
+    </form>
+
+  </div>
+
+  <div *ngIf="create" class="userAction">
+
+    <form #createRoom="ngForm" (ngSubmit)="createMe(newroom)">
+      <input [(ngModel)]="newroom.name" name="name" type="text" placeholder="Room name" minlength="4" maxlength="25" required><br>
+      <input [(ngModel)]="newroom.password" name="password" type="password" placeholder="Room password" minlength="4" maxlength="25" required><br>
+      <input [(ngModel)]="newroom.cpassword" name="cpassword" type="password" placeholder="Confirm password" minlength="4" maxlength="25" required><br>
+      <input type="submit" value="Create" [disabled]="!createRoom.form.valid">
+    </form>
+
+  </div>
+
+</div>

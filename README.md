@@ -22,4 +22,5 @@ The running application can be found [here](https://chitchatmessage.herokuapp.co
 <ol>
   <li>Navigate into "chitchat-back" and run <code>node server.js</code></li>
   <li>Navigate into "chitchat-front" and run <code>ng build --watch</code></li>
+  <li>The application will be running on localhost:5000</li>
 </ol>

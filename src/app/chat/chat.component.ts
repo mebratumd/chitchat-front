@@ -12,7 +12,7 @@ export class ChatComponent implements OnInit {
   socket: any;
   text = "";
   messages = [];
-  room = {};
+  room = <any>{};
   users = [];
 
   constructor(private auth: AuthService) { }

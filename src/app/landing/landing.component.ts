@@ -12,8 +12,8 @@ export class LandingComponent implements OnInit {
 
   join: boolean = false;
   create: boolean = false;
-  room = {};
-  newroom = {};
+  room = <any>{};
+  newroom = <any>{};
   errors = [];
   success: boolean = false;
   createSub: Subscription;

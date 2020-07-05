@@ -27,6 +27,8 @@ h1 {
 
 .chatBox {
   padding:20px;
+  max-height:400px;
+  overflow:scroll;
 }
 
 textarea {

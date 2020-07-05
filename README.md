@@ -5,7 +5,7 @@ Express and MongoDB; it can be found [here](https://github.com/mebratumd/chitcha
 
 The running application can be found [here](https://chitchatmessage.herokuapp.com/).
 
-# Use
+# Set up
 
 <ol>
   <li>Clone back end repo <code>git clone https://github.com/mebratumd/chitchat-back.git</code></li>
@@ -15,4 +15,11 @@ The running application can be found [here](https://chitchatmessage.herokuapp.co
   <li>Navigate into front end rep and install dependencies <code>npm install</code></li>
   <li>In "angular.json" file update <code>outputPath</code> to "../chitchat-back/public/"</li>
   <li>In .env file set <code>MONGO_URI</code> to your database connection URI</li>
+</ol>
+
+# Use
+
+<ol>
+  <li>Navigate into "chitchat-back" and run <code>node server.js</code></li>
+  <li>Navigate into "chitchat-front" and run <code>ng build --watch</code></li>
 </ol>
